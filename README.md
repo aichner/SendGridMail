@@ -45,8 +45,8 @@
 
 ## [](#quick-start)Quick start
 
-- Clone the repository: `git clone https://github.com/aichner/SendGridMail.git react-mdb`
-- Go to the new folder `cd react-mdb`
+- Clone the repository: `git clone https://github.com/aichner/SendGridMail.git sendgridmail`
+- Go to the new folder `cd sendgridmail`
 - Run `npm install`
 - Start with `npm start`
 
