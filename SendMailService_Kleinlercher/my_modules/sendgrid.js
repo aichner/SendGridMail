@@ -5,7 +5,7 @@ const router = express.Router();
 const utils = require('../utils');
 const cors = require('cors');
 
-router.post('/sendmail', /* cors(utils.corsOptions), */ auth.jwtMW, (req, res) => {
+router.post('/sendmail', cors(utils.corsOptions),  auth.jwtMW, (req, res) => {
     let toMail = req.body.to;
     let templateData = req.body.templateData;
     let templateId = req.body.templateId;
