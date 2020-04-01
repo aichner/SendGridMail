@@ -1,9 +1,0 @@
-{
-    "sqltools.connections": [
-        {
-            "database": "/Users/rhufsky/Documents/java/PHPStorm/IT-2018-2019-4AHITM/MEDT-Samples/EX-03-Sequelize-Passport-Template/database/users.sqlite",
-            "dialect": "SQLite",
-            "name": "slite"
-        }
-    ]
-}

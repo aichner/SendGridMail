@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 const exjwt = require('express-jwt');
 const utils = require('../utils');
 const router = express.Router();
-const sec1 = 'xunbnkmsbesjudsgokpy';
-const sec2 = 'fiogwutkihxmqyffrjeh';
+const sec1 = process.env.AUTH_SEC1;
+const sec2 = process.env.AUTH_SEC2;
 
 router.jwtMW = exjwt({
     secret: sec1
