@@ -20,7 +20,7 @@ function centralErrorHandler(err, req, res, next) {
     }
 }
 
-var whitelist = ['http://gutschein2go.at'];
+var whitelist = ['https://gutschein2go.at'];
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
