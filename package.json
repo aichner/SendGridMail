@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "console.log('hello world');",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
