@@ -15,6 +15,8 @@ app.use('/login', auth);
 app.use('', sendGrid);
 app.use(utils.centralErrorHandler);
 
-app.listen(process.env.port, () => {
-    console.log(`Server is up and running at http://localhost:${process.env.port}`);
+let port = (process.env.port || 3000);
+
+app.listen(port, () => {
+    console.log(`Server is up and running at http://localhost:${port}`);
 })
