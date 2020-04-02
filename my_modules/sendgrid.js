@@ -3,7 +3,7 @@ const express = require('express');
 const auth = require('./authentification');
 const router = express.Router();
 
-router.post('/sendmail',  auth.jwtMW, (req, res) => {
+router.post('/sendmail', auth.jwtMW, (req, res) => {
     let toMail = req.body.to;
     let templateData = req.body.templateData;
     let templateId = req.body.templateId;
@@ -27,7 +27,12 @@ router.post('/sendmail',  auth.jwtMW, (req, res) => {
                 "dynamic_template_data": templateData
             }
         ],
-        "template_id": templateId
+        "template_id": templateId,
+        "headers": {
+            "Organization": "Gutschein2Go",
+            "x-sender": "Gutschein2Go noreply@gutschein2go.at",
+            "x-mailer": "NodeJs"
+        }
     };
 
     var options = {
@@ -40,7 +45,7 @@ router.post('/sendmail',  auth.jwtMW, (req, res) => {
     function callback(error, response, body) {
         if (error == null) {
             console.log('Successfully sent mail');
-            console.log(body);
+            console.log(response);
         } else {
             console.error(error);
             console.error(response);
