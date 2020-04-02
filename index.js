@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 const sendGrid = require('./my_modules/sendgrid');
 const auth = require('./my_modules/authentification')
 const utils = require('./utils');
+const cors = require('cors');
 
+app.use(cors(utils.corsOptions))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/login', auth);
