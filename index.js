@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
 
 app.use(utils.centralErrorHandler);
 
-let port = (process.env.port || 3000);
+let port = (process.env.PORT || 3000);
 
 app.listen(port, () => {
     console.log(`Server is up and running at http://localhost:${port}`);
