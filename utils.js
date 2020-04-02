@@ -23,6 +23,7 @@ function centralErrorHandler(err, req, res, next) {
 var whitelist = ['https://gutschein2go.at'];
 var corsOptions = {
     origin: function (origin, callback) {
+        console.log('Request from origin: ' + origin);
         if (whitelist.indexOf(origin) !== -1) {
             callback(null, true)
         } else {
