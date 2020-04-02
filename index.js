@@ -13,6 +13,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/login', auth);
 app.use('', sendGrid);
+
+app.get('*', (req, res) => {
+    res.status(200).send('Hello world');
+});
+
 app.use(utils.centralErrorHandler);
 
 let port = (process.env.port || 3000);
